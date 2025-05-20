@@ -1,73 +1,80 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glamour Clothes</title>
-  <link rel="stylesheet" href="cropped.css"> 
-  <link rel="stylesheet" href="cropped.js">
+  <link rel="stylesheet" href="cropped.css" />
 </head>
 <body>
-  <header>
-    <img src="logo-placeholder.png" alt="Logo Glamour Clothes" class="logo" />
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Blusas</a>
-      <a href="#"><i>Calças</i></a>
-      <a href="#">Jaquetas</a>
+  <header class="header">
+    <div class="logo"><img src="logo.jpeg" alt="Glamour Clothes"></div>
+    <nav class="menu">
+      <a href="home.html" class="menu-item" data-section="home">Home</a>
+      <a href="cropped.html" class="menu-item" data-section="blusas">Blusas</a>
+      <a href="#" class="menu-item" data-section="calcas">Calças</a>
+      <a href="#" class="menu-item" data-section="jaquetas">Jaquetas</a>
+      <a href="#" class="menu-item" data-section="buscar"><em>Buscar</em></a>
     </nav>
     <div class="search-cart">
-      <input type="text" placeholder="Buscar" />
-      <div class="search-cart">
-        <span>🛒</span>
+      <input type="text" id="search-input" placeholder="🔍" />
+      <img src="cart.png" alt="Carrinho" id="cart-button">
     </div>
   </header>
 
-  <section class="products">
+  <main class="product-list" id="content">
     <div class="product">
-      <img src="coolane.jpeg.png" alt="Coolane Slim Preta" />
-      <div class="product-title">COOLANE SLIM PRETA, MANGA E GOLA RETA.</div>
-      <div class="price">R$ 50,00</div>
-      <button class="add-btn">ADICIONAR</button>
+      <img src="Adobe Express - file (1).png"Coolane Slim">
+      <p><strong>COOLANE SLIM PRETA, MANGA E GOLA RETA.</strong></p>
+      <p>R$ 50,00</p>
+      <button class="add-to-cart">ADICIONAR</button>
     </div>
     <div class="product">
-      <img src="bodycinza.jpeg.png" alt="Bodysuit Cinza" />
-      <div class="product-title">BODYSUIT CINZA, UM OMBRO.</div>
-      <div class="price">R$ 66,90</div>
-      <button class="add-btn">ADICIONAR</button>
+      <img src="Adobe Express - file.png" alt="Bodysuit Cinza">
+      <p><strong>BODYSUIT CINZA, UM OMBRO.</strong></p>
+      <p>R$ 66,90</p>
+      <button class="add-to-cart">ADICIONAR</button>
     </div>
     <div class="product">
-      <img src="flirla.jpeg.png" alt="Top Plissado Branco" />
-      <div class="product-title">FIRLA TOP RECORTADO PLISSADO BRANCO.</div>
-      <div class="price">R$55,90</div>
-      <button class="add-btn">ADICIONAR</button>
+      <img src="Adobe Express - file (3).png" alt="Flrla Branco">
+      <p><strong>FLRLA TOP RECORTADO PLISSADO BRANCO.</strong></p>
+      <p>R$55,90</p>
+      <button class="add-to-cart">ADICIONAR</button>
     </div>
     <div class="product">
-      <img src="product4.jpg" alt="Cropped Preto" />
-      <div class="product-title">CROPPED ALÇA GROSSA PRETO</div>
-      <div class="price">R$ 49,90</div>
-      <button class="add-btn">ADICIONAR</button>
+      <img src="croppedcostanua.jpeg.jpeg" alt="Cropped Costa Nua">
+      <p><strong>CROPPED COSTA NUA</strong></p>
+      <p>R$ 49,90</p>
+      <button class="add-to-cart">ADICIONAR</button>
     </div>
-  </section>
+  </main>
 
   <footer>
-    <div class="footer-top">
-      <div class="social">@glamour.clothes</div>
+    <div class="footer-content">
+      <div class="social">
+         <h3>@glamour.clothes</h3>
+      </div>
       <div class="payments">
-        <img src="visa.png" alt="Visa">
-        <img src="mastercard.png" alt="Mastercard">
-        <img src="amex.png" alt="Amex">
-        <img src="elo.png" alt="Elo">
-        <img src="hipercard.png" alt="Hipercard">
-        <img src="discover.png" alt="Discover">
-        <img src="pix.png" alt="Pix">
+        <p>Formas de pagamento</p>
+        <div class="payment-methods">
+          <img src="visa.png" alt="Visa">
+          <img src="master.png" alt="Mastercard">
+          <img src="elo.png" alt="Elo">
+          <img src="piixonnn.png" alt="Pix">
+        </div>
+      </div>
+      <div class="brand">
+        <h2>Glamour Clothes</h2>
       </div>
     </div>
-    <h2>Glamour Clothes</h2>
-    <div class="company-info">
-      © 2025 Glamour Clothes. Todos os direitos reservados. Fisia Comércio de Produtos de Moda Ltda – CNPJ: 27550329/4811-91<br>
-      Rodovia Fernão Dias, S/N Km 947.5 – Galpão Modulo 3640 – CEP 12.023-483 – Extrema - SP
+    <div class="legal">
+      © 2025 Glamour Clothes. Todos os direitos reservados. Fisia Comércio de Produtos de Moda Ltda - CNPJ: 27550329/4811-91 Rodovia Fernão Dias, S/N Km 947.5 - Galpão Módulo 3640 - CEP 12.023-483 - Extrema - SP
+    </div>
+    <div class="techcore">
+      <img src="techcore.jpeg" alt="Techcore Desenvolvimento de Software">
     </div>
   </footer>
+
+  <script src="cropped.js"></script>
 </body>
 </html>
