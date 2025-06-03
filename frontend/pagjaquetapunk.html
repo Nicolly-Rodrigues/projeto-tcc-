@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Glamour Clothes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+    }
+
+    .container {
+      background-color: #e6e6e6;
+      margin: 30px auto;
+      padding: 30px;
+      max-width: 900px;
+      border-radius: 30px;
+    }
+
+    .header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      border-radius: 30px 30px 0 0;
+      text-align: center;
+      font-family: "Brush Script MT", cursive;
+      font-size: 36px;
+    }
+
+    .product-section {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-images img {
+      width: 220px;
+      border-radius: 10px;
+    }
+
+    .product-info {
+      max-width: 300px;
+    }
+
+    .product-info h2 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .installments {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .quantity button {
+      width: 30px;
+      height: 30px;
+      background-color: #333;
+      color: white;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .quantity span {
+      width: 30px;
+      text-align: center;
+    }
+
+    .add-to-cart {
+      background-color: #e5a7dc;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .footer {
+      text-align: right;
+      padding: 10px 30px;
+    }
+
+    .footer button {
+      background-color: #e5a7dc;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    Glamour Clothes
+  </div>
+
+  <div class="container">
+    <div class="product-section">
+      <div class="product-images">
+        <img src="jaquetapunk.jpeg FRENTE1.jpeg" alt="Frente">
+        <img src="jaquetapunk ATRAS (1).jpeg" alt="Verso">
+      </div>
+      <div class="product-info">
+        <h2>JAQUETA ZIPER POMWE PUNK AZUL.</h2>
+        <div class="price">R$ 107,90</div>
+        <div class="installments">ou 6x de R$ 17,98.</div>
+        <div class="quantity">
+          <button onclick="changeQty(-1)">-</button>
+          <span id="qty">1</span>
+          <button onclick="changeQty(1)">+</button>
+        </div>
+        <button class="add-to-cart">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button>Voltar</button>
+  </div>
+
+  <script>
+    function changeQty(change) {
+      const qtySpan = document.getElementById('qty');
+      let current = parseInt(qtySpan.innerText);
+      if (current + change >= 1) {
+        qtySpan.innerText = current + change;
+      }
+    }
+  </script>
+</body>
+</html>

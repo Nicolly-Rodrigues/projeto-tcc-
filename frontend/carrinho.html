@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Glamour Clothes - Carrinho</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2e2e2e;
+      color: white;
+    }
+
+    header {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 100px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-style: italic;
+      font-size: 18px;
+    }
+
+    .search-box {
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 10px;
+      padding: 5px 10px;
+      color: white;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      text-align: center;
+    }
+
+    .fotocarrinho {
+      width: 10px;
+      height: auto;
+      color: #ccc;
+    }
+
+    .textocarrinho {
+      font-size: 24px;
+      font-style: italic;
+      margin-top: 20px;
+    }
+    
+    .img #fotocarrinho {
+        width: 10px;
+        height: auto;
+    }
+
+    .pedido {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      background-color: #f09ad2;
+      color: black;
+      border: 2px solid black;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Glamour Clothes Logo">
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Blusas</a>
+      <a href="#"><i>Calças</i></a>
+      <a href="#"><i>Jaquetas</i></a>
+      <a href="#"><i>Buscar</i></a>
+      <input class="search-box" type="text" placeholder="">
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="pedido">Lista de pedidos:</div>
+    <div class="fotocarrinho"><img src="carrinho.png" alt="carrinho" style="width: 300px;"></div>
+    <div class="textocarrinho"><i>Seu carrinho está vazio...</i></div>
+    <div class="buttons">
+      <button class="btn">Voltar</button>
+      <button class="btn">finalizar compra</button>
+    </div>
+  </div>
+
+</body>
+</html>
