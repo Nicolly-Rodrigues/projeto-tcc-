@@ -1,69 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const content = document.getElementById('content');
-    let cartItems = [];
-  
-    // Conteúdos simulados por seção
-    const sections = {
-      home: '<h2>Bem-vindo à Glamour Clothes</h2><p>Confira nossas novidades!</p>',
-      blusas: '<h2>Blusas</h2><p>Produtos da categoria Blusas.</p>',
-      calcas: '<h2>Calças</h2><p>Produtos da categoria Calças.</p>',
-      jaquetas: '<h2>Jaquetas</h2><p>Produtos da categoria Jaquetas.</p>',
-      buscar: '<h2>Buscar</h2><p>Digite sua busca acima.</p>',
-    };
-  
-    // Navegação por seções
-    document.querySelectorAll('.menu-item').forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const section = e.target.dataset.section;
-        if (section && sections[section]) {
-          content.innerHTML = `<div class="section-content">${sections[section]}</div>`;
-        }
-      });
-    });
-  
-    // Carrinho (ícone no topo)
-    document.getElementById('cart-button').addEventListener('click', () => {
-      renderCart();
-    });
-  
-    // Busca por palavra-chave
-    document.getElementById('search-input').addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        const term = e.target.value.trim();
-        if (term) {
-          content.innerHTML = `<div class="section-content"><h2>Resultados para "${term}"</h2><p>Exibindo resultados de busca...</p></div>`;
-        }
+  const categorias = document.title.split(' | ')[0].toLowerCase();
+  fetch(`http://127.0.0.1:8000/api/produtos/`)
+
+  .then(response => {
+    if (!response.ok) throw new Error('Erro ao buscar produto');
+    return response.json();
+  })
+  .then(data => {
+    const product_list = document.getElementById('produtos');
+    product_list.innerHTML = '';
+    data.forEach(livro => {
+      if(categorias === "calcas") {
+        const produtosDiv = document.createElement('div');
+        produtosDiv.className = 'produtos';
+        const imageUrl = `${produtos.image}`;
+        product_listDiv.innerHTML = `
+        <div class="product">
+        <img src="calcacinzaaaaa.jpeg.jpeg" alt="Wide Leg Jeans Cintura Alta Cinza">
+        <p><strong>Wide Leg Jeans Cintura Alta Cinza</strong></p>
+        <p>R$ 210,00</p>
+        <button class="add-to-cart">ADICIONAR</button>
+      </div>
+      <div class="product">
+        <img src="wide led ragada.jpeg.png" alt="Wide Leg Jeans Cintura Alta Rasgada">
+        <p><strong>Wide Leg Jeans Cintura Alta Rasgada.</strongWide> </strong></p>
+        <p>R$ 199,99</p>
+        <button class="add-to-cart">ADICIONAR</button>
+      </div>
+      <div class="product">
+        <img src="calca baggy.jpeg.png" alt="Cargo Baggy Jeans Verde">
+        <p><strong>Cargo Baggy Jeans Verde</strong></p>
+        <p>R$250,90</p>
+        <button class="add-to-cart">ADICIONAR</button>
+      </div>
+      <div class="product">
+        <img src="Calcabege.jpeg.png" alt="Cargo Wide Leg Bege">
+        <p><strong>Cargo Wide Leg Bege</strong></p>
+        <p>R$ 180,90</p>
+        <button class="add-to-cart">ADICIONAR</button>
+      </div>
+        `;
+        container.appendChild(produtosDiv);
       }
     });
-  
-    // Adicionar ao carrinho
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-      button.addEventListener('click', (e) => {
-        const product = e.target.closest('.product');
-        const title = product.querySelector('.product-title')?.textContent.trim();
-        const price = product.querySelector('.product-price')?.textContent.trim();
-  
-        if (title && price) {
-          cartItems.push({ title, price });
-          renderCart();
-        }
-      });
-    });
-  
-    // Renderização do carrinho
-    function renderCart() {
-      if (cartItems.length === 0) {
-        content.innerHTML = '<div class="section-content"><h2>Seu carrinho está vazio.</h2></div>';
-        return;
-      }
-  
-      let cartHTML = '<div class="section-content"><h2>Seu Carrinho</h2><ul>';
-      cartItems.forEach((item, index) => {
-        cartHTML += `<li>${item.title} - ${item.price}</li>`;
-      });
-      cartHTML += '</ul></div>';
-  
-      content.innerHTML = cartHTML;
-    }
+  })
+  .catch(error => {
+    console.error("Erro ao carregar produtos:", error);
   });
+});
