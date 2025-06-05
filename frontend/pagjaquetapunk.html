@@ -11,21 +11,21 @@
   </div>
 
   <div class="container">
-    <div class="product-section">
-      <div class="product-images">
+    <div class="secaoproduto">
+      <div class="imgproduto">
         <img src="jaquetapunk.jpeg FRENTE1.jpeg" alt="Frente">
         <img src="jaquetapunk ATRAS (1).jpeg" alt="Verso">
       </div>
-      <div class="product-info">
+      <div class="infoproduto">
         <h2>JAQUETA ZIPER POMWE PUNK AZUL.</h2>
-        <div class="price">R$ 107,90</div>
-        <div class="installments">ou 6x de R$ 17,98.</div>
-        <div class="quantity">
+        <div class="preco">R$ 107,90</div>
+        <div class="parcelamento">ou 6x de R$ 17,98.</div>
+        <div class="quantidade">
           <button onclick="changeQty(-1)">-</button>
           <span id="qty">1</span>
           <button onclick="changeQty(1)">+</button>
         </div>
-        <button class="add-to-cart">Adicionar ao carrinho</button>
+        <button class="addcarrinho">Adicionar ao carrinho</button>
       </div>
     </div>
   </div>
@@ -33,15 +33,5 @@
   <div class="footer">
     <button>Voltar</button>
   </div>
-
-  <script>
-    function changeQty(change) {
-      const qtySpan = document.getElementById('qty');
-      let current = parseInt(qtySpan.innerText);
-      if (current + change >= 1) {
-        qtySpan.innerText = current + change;
-      }
-    }
-  </script>
 </body>
 </html>
