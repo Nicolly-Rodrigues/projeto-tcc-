@@ -25,24 +25,24 @@ body {
     font-style: italic;
   }
   
-  .search-cart {
+  .barradepesquisa {
     display: flex;
     align-items: center;
   }
   
-  .search-cart input {
+  .barradepesquisa pesquisa {
     padding: 5px;
     border-radius: 10px;
     border: none;
     margin-right: 10px;
   }
   
-  .search-cart img {
+  .barradepesquisa img {
     height: 24px;
     cursor: pointer;
   }
   
-  .product-list {
+  .listaproduto {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -50,7 +50,7 @@ body {
     padding: 20px;
   }
   
-  .product {
+  .produto {
     background-color: #ccc;
     color: black;
     margin: 10px;
@@ -59,7 +59,7 @@ body {
     text-align: center;
   }
   
-  .product button {
+  .produto button {
     background-color: pink;
     border: none;
     padding: 10px;
@@ -67,7 +67,7 @@ body {
     cursor: pointer;
   }
   
-  .footer-content {
+  .footer {
     background: black;
     padding: 20px;
     display: flex;
@@ -76,7 +76,7 @@ body {
     border-radius: 0 0 30px 30px;
   }
   
-  .payment-methods img {
+  .metodos img {
     height: 20px;
     margin: 0 5px;
   }
