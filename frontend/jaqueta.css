@@ -42,7 +42,7 @@ body {
     cursor: pointer;
   }
   
-  .listaproduto {
+  .produtolist {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -93,7 +93,7 @@ body {
     margin: 0 auto;
   }
   
-  .section-content {
+  .sectioncontent {
     background-color: #555;
     padding: 20px;
     margin: 20px;

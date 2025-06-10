@@ -30,13 +30,13 @@ body {
     padding: 10px 15px;
   }
 
-  .search-cart {
+  .carrinho {
     display: flex;
     align-items: center;
     gap: 20px;
   }
 
-  .search-box {
+  .pesquisa {
     background-color: #444;
     border: 2px solid #ccc;
     border-radius: 20px;
@@ -52,7 +52,7 @@ body {
     padding: 80px 50px;
   }
 
-  .product {
+  .produto {
     background-color: #ddd;
     color: black;
     padding: 100px;
@@ -61,12 +61,12 @@ body {
     border-radius: 5px;
   }
 
-  .product img {
+  .produto img {
     width: 100%;
     height: auto;
   }
 
-  .product button {
+  .produto button {
     margin-top: 10px;
     padding: 8px;
     width: 100%;
