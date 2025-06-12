@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 from rest_framework import generics
 from .models import Categoria, Produto
@@ -19,3 +19,6 @@ class ProdutoList(generics.ListCreateAPIView):
 class ProdutoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Produto.objects.all()
     serializer_class = ProdutoSerializer
+def produto_detalhe(request, id):
+    produto = get_object_or_404(Produto, id=id)
+    return render(request, 'produto_detalhe.html', {'produto': produto})
