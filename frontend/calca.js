@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src = "${calca.imagem}" alt = "${calca.nome}"/>
             <p><strong>${calca.nome}</strong></p>
             <p> R$ ${calca.preco}</p>
-            <button class="addcarrinho">ADICIONAR</button>
+            <button onclick="window.location.href='./pagproduto.html?id=${calca.id}'" class="addcarrinho">ADICIONAR</button>
           </div>
         `;
         container.appendChild(produtosDiv);
