@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Cadastro de Pessoa</title>
    <link rel="stylesheet" href="style.css"> 
-   <link rel="stylesheet" href="index.js"> 
 </head>
 <body>
     <div class="container">
@@ -15,7 +14,7 @@
         <div class="form-container">
             <div class="form-box">
                 <h1>Bem vinda (o) a Glamour Clothes</h1>
-                <form action="frontend/home.html" method="post">
+                <form action="home.html" method="post">
 
                     <label for="login">Login:</label>
                     <input type="text" id="login" name="login" required>
@@ -23,11 +22,11 @@
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>
 
-                    <input type="submit" value="Cadastrar">
-                        <a href="/frontend/home.html"></a>
+                    <button type="button" onclick="irParaHome()">Cadastrar</button>
                 </form>
             </div>
         </div>
     </div>
 </body>
+<script src="index.js"></script>
 </html>
